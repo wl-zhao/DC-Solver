@@ -1,5 +1,23 @@
 # DC-Solver: Improving Predictor-Corrector Diffusion Sampler via Dynamic Compensation
-This code contains the Pytorch implementation for DC-Solver.
+
+Created by [Wenliang Zhao](https://wl-zhao.github.io/), [Wang Haolin](https://github.com/howlin-wang), [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ&hl=en&authuser=1), [Jiwen Lu](https://scholar.google.com/citations?user=TN8uDQoAAAAJ&hl=en&authuser=1)
+
+This code contains the Pytorch implementation for DC-Solver (ECCV 2024).
+
+[[arXiv]]()
+
+DC-Solver is designed to improve the alignment in predictor-corrector diffusion samplers (while also applicable to predictor-only samplers). 
+
+![pipeline](assets/pipeline.png)
+
+
+With negalectable searching costs, DC-Solver can achieve as few as 5 sampling steps (NFE). Here is a comparison of diffent samplers with only 5 NFE, where the ground truth is obtained by a 999-step DDIM.
+
+![demo](assets/demo.png)
+
+
+DC-Solver can also work in training-free manner when equipped with the proposed CPR (cascade polynomial regression). Please see the instructions bellow for details.
+
 
 ## Installation
 We implement our DC-Solver in both [Stable-Diffusion](https://github.com/CompVis/stable-diffusion) and [diffusers](https://github.com/huggingface/diffusers), please follow their instructions to install the environment. Our implementation of DC-Solver for the two codebases are in the `stable-diffusion` and `diffusers` folders, respectively. Please clone their repo and copy our code of DC-Solver to the corresponding codebase.
@@ -39,3 +57,17 @@ PYTHONPATH=./src:$PYTHONPATH \
 
 ## Acknowledgement
 Our code is based on [UniPC](https://github.com/wl-zhao/UniPC), [Stable-Diffusion](https://github.com/CompVis/stable-diffusion), [diffusers](https://github.com/huggingface/diffusers). Thanks for their awesome work!
+
+
+# Citation
+
+If you find our work useful in your research, please consider citing:
+
+```
+@article{zhao2024dcsolver,
+  title={DC-Solver: Improving Predictor-Corrector Diffusion Sampler via Dynamic Compensation},
+  author={Zhao, Wenliang and Wang, Haolin and Zhou, Jie and Lu, Jiwen},
+  journal={ECCV},
+  year={2024}
+}
+```
