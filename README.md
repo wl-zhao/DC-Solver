@@ -34,7 +34,7 @@ PYTHONPATH=./src:$PYTHONPATH \
 We can also use the cascade polynomial regression to instantly predict the dynamic compensation ratios on unseen NFE/CFG by just passing the `--use_cpr` flag, for example:
 ```
 PYTHONPATH=./src:$PYTHONPATH \
-    python scripts/sample_dc_solver.py --mode sample --NFE 12 --CFG 6.0 --use_cpr
+    python scripts/sample_dc_solver.py --mode sample --NFE 6 --CFG 6.0 --use_cpr
 ```
 
 ## Acknowledgement
