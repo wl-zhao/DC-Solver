@@ -4,7 +4,7 @@ Created by [Wenliang Zhao](https://wl-zhao.github.io/), [Haolin Wang](https://gi
 
 This code contains the PyTorch implementation for DC-Solver (ECCV 2024).
 
-[[arXiv]]()
+[[arXiv]](https://arxiv.org/abs/2409.03755)
 
 DC-Solver is designed to improve alignment in predictor-corrector diffusion samplers (while also applicable to predictor-only samplers).
 
